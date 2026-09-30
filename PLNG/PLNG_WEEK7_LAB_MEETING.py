@@ -31,3 +31,7 @@ def MAXIMUM(*numbers):
 
 maxi = MAXIMUM(10,10,10,20,40,7,7)
 print(maxi)
+
+def kFunc(**kid):
+    print("My son's last name is " + kid["lname"])
+kFunc(fname="Toby", lname="Refsnes")
