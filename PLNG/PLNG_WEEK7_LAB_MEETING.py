@@ -39,3 +39,11 @@ kFunc(fname="Toby", lname="Refsnes")
 def kFuncs(**vars):
     print("Type: ", type(vars))
 kFuncs(name="Toby", age=30, city="Bergen")
+
+x = range(3,10,2)
+print(x)
+print(list(x))
+
+r = range(10)
+print(r[2])
+print(r[:7])
