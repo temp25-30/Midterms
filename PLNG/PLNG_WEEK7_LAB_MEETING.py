@@ -10,3 +10,24 @@ def myfunc(*args):
     print("All args: ", args)
 
 myfunc("Emil","Toby","Linus")
+
+def incrementer(*numbers):
+    total = 0
+    for num in numbers:
+        total += num
+    return total
+
+total = incrementer(10,10,10)
+print(total)
+
+def MAXIMUM(*numbers):
+    if len(numbers) == 0:
+        return None
+    maxnum = numbers[0]
+    for num in numbers:
+        if num > maxnum:
+            maxnum = num
+    return maxnum
+
+maxi = MAXIMUM(10,10,10,20,40,7,7)
+print(maxi)
