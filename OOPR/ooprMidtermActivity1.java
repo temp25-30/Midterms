@@ -39,9 +39,7 @@ class Program_1{
     }
 }
 
-class Program2{
-    
-}
+
 
 class Program3{
     public static int[] remove(int[] arr, int i){      
