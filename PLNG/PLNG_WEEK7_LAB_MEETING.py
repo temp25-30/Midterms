@@ -35,3 +35,7 @@ print(maxi)
 def kFunc(**kid):
     print("My son's last name is " + kid["lname"])
 kFunc(fname="Toby", lname="Refsnes")
+
+def kFuncs(**vars):
+    print("Type: ", type(vars))
+kFuncs(name="Toby", age=30, city="Bergen")
