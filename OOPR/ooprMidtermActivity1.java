@@ -1,4 +1,86 @@
 import java.util.Scanner;
+class Program_1{
+    public static void prog(){
+        Scanner scanner = new Scanner(System.in);
+        double[] numbers = new double[10];
+        
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.print("Enter number: ");
+            numbers[i] = scanner.nextDouble();
+        }
+       
+        double sumPositive = 0.0;
+        int countPositive = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] > 0) {
+                sumPositive += numbers[i];
+                countPositive++;
+            }
+        }
+        
+        int countNegative = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] < 0) {
+                countNegative++;
+            }
+        }
+        
+        double minValue = numbers[0];
+        for (int i = 1; i < numbers.length; i++) {
+            if (numbers[i] < minValue) {
+                minValue = numbers[i];
+            }
+        }
+            
+        double avgPositive = sumPositive / countPositive;
+        System.out.println("Sum of positive numbers: " + sumPositive);
+        System.out.println("Average of positive numbers: " + avgPositive);
+        System.out.println("Number of negative numbers: " + countNegative);
+    }
+}
+
+class Program2{
+    
+}
+
+class Program3{
+    public static int[] remove(int[] arr, int i){      
+        if (arr == null || i < 0 || i >= arr.length)
+            return arr;
+        int[] arr1 = new int[arr.length - 1];
+        System.arraycopy(arr, 0, arr1, 0, i);
+
+        System.arraycopy(arr, i + 1,
+                        arr1, i,
+                        arr.length - i - 1);
+        return arr1;
+    }
+    
+    public static void prog(){
+        Scanner input = new Scanner(System.in);
+        int[] numbers = new int[5];
+        for(int i =0; i<5;i++){
+            System.out.print("Input numbers: ");
+            numbers[i] = input.nextInt();
+        }
+        
+        System.out.println("Stored Numbers: ");
+        for(int i =0; i<5;i++){
+            System.out.print(numbers[i] + " ");
+        }
+
+        System.out.print("\nEnter pos. to be removed from array: ");
+        int nRev = input.nextInt();
+        numbers = remove(numbers, nRev);
+        
+        System.out.print("New numbers: ");
+        for(int i =0; i<4;i++){
+            System.out.print(numbers[i]+" ");
+        }
+        
+    }
+}
+
 class Program4{
     public static void prog(){
         Scanner input = new Scanner(System.in);
