@@ -244,7 +244,6 @@ class Program7{
 
         try(BufferedReader reader = new BufferedReader(new FileReader(filePath))){
             String line;
-            //for(int i =0; i<line.length();i++)
             while((line = reader.readLine()) != null){               
                 System.out.println(line);
             }
