@@ -127,7 +127,7 @@ class Program4{
         
         int[] numbers = new int[n];
         for(int i =0; i<n;i++){
-            System.out.print("Input size of array: ");
+            System.out.print("Input numbers for array: ");
             numbers[i] = input.nextInt();
         }
         
