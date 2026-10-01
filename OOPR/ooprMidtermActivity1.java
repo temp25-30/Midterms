@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+import java.util.Arrays;
 class Program_1{
     public static void prog(){
         Scanner scanner = new Scanner(System.in);
