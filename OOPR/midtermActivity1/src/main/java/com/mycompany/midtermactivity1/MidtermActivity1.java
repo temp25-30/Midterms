@@ -52,24 +52,32 @@ class Program2{
         Scanner input = new Scanner(System.in);
         int[] array = new int[8];
         for(int i=0;i<8;i++){
-            System.out.print("Enter Number: ");
-            array[i]=input.nextInt();
+            System.out.print("Enter number: ");
+            array[i] = input.nextInt();
         }
         int[] uniquearray = Arrays.stream(array).distinct().toArray();
-        int largest=Integer.MIN_VALUE,secondlargest=Integer.MIN_VALUE,smallest=Integer.MAX_VALUE,secondsmallest=Integer.MAX_VALUE;
+        int largest=Integer.MIN_VALUE, secondLargest=Integer.MIN_VALUE, smallest=Integer.MAX_VALUE, secondSmallest=Integer.MAX_VALUE;
         for(int i=0;i<uniquearray.length;i++){
-            if(array[i]>largest){largest=array[i];}
-            if(array[i]<smallest){smallest=array[i];}
+            if(array[i]>largest){
+                largest = array[i];
+            }
+            if(array[i]<smallest){
+                smallest = array[i];
+            }
         }
         for(int i=0;i<uniquearray.length;i++){
-            if(array[i]>secondlargest&&array[i]<largest){secondlargest=array[i];}
-            if(array[i]<secondsmallest&&array[i]>smallest){secondsmallest=array[i];}
+            if(array[i]>secondlargest&&array[i]<largest){
+                secondLargest = array[i];
+            }
+            if(array[i]<secondsmallest&&array[i]>smallest){
+                secondSmallest = array[i];
+            }
         }
-        System.out.print("Unique Array Elements: ");
+        System.out.print("Unique array elements: ");
         for(int i=0;i<uniquearray.length;i++){
             System.out.print(uniquearray[i]+" ");
         }
-        System.out.println("\nSecond Largest Number: "+secondlargest+"\nSecond Smallest Number: "+secondsmallest);
+        System.out.println("\nSecond largest number: "+secondLargest+"\nSecond smallest number: "+secondSmallest);
     }    
 }
 
