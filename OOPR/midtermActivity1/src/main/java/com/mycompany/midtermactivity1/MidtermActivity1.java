@@ -258,7 +258,61 @@ class Program7{
 }
 
 public class MidtermActivity1 {
+    protected static boolean selection = true;
+    public static void askCont(){
+        Scanner input = new Scanner(System.in);
+        System.out.print("Would you like to continue? Y/N: ");
+        char letter = input.next().charAt(0);
+        char lowLetter = Character.toLowerCase(letter);
+        if(lowLetter == 'y'){
+            selection = false;
+        }
+        else{
+            selection = true;
+        }
+    }
+    
+    public static void selectionMenu(){
+        Scanner input = new Scanner(System.in);
+        int selected = 1;
+        while(selection == true){
+            System.out.println("Select program to be run:\nProgram 1.\nProgram 2.\nProgram 3.\nProgram 4.\nProgram 5.\nProgram 6.\nProgram 7.\nExit 8.");
+            selected = input.nextInt();
+            
+            askCont();  
+        }
+        switch(selected){
+                case 1:
+                    Program_1.prog();
+                    break;
+                case 2:
+                    Program2.prog();
+                    break;
+                case 3:
+                    Program3.prog();
+                    break;
+                case 4:
+                    Program4.prog();
+                    break;
+                case 5:
+                    Program5.prog();
+                    break;
+                case 6:
+                    Program6.prog();
+                    break;
+                case 7:
+                    Program7.prog();
+                    break;
+                case 8:
+                    System.out.print("Exiting System...");
+                    break;
+                default:
+                    selectionMenu();
+                    break;
+        }
+    }
+    
     public static void main(String args[]) {
-        Program7.prog();
+        selectionMenu();
     }
 }
