@@ -41,6 +41,7 @@ class Program_1{
             
         double avgPositive = sumPositive / countPositive;
         System.out.println("Sum of positive numbers: " + sumPositive);
+        System.out.println("Minumum number: " + minValue);
         System.out.println("Average of positive numbers: " + avgPositive);
         System.out.println("Number of negative numbers: " + countNegative);
     }
