@@ -6,6 +6,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.InputMismatchException;
 class Program_1{
     public static void prog(){
         Scanner scanner = new Scanner(System.in);
@@ -285,9 +286,17 @@ public class MidtermActivity1 {
         Scanner input = new Scanner(System.in);
         int selected = 1;
         while(selection == true){
+            boolean keepsLooping = true;
+            while (keepsLooping) {
             System.out.println("Select program to be run:\nProgram 1.\nProgram 2.\nProgram 3.\nProgram 4.\nProgram 5.\nProgram 6.\nProgram 7.\nExit 8.");
-            selected = input.nextInt();
-            
+                try {
+                    selected = input.nextInt();
+                    keepsLooping =false;
+                } catch (InputMismatchException e) {
+                    System.out.println("That is not a valid integer. Try again.");
+                    input.next();
+                }
+            }
             askCont();  
         }
         switch(selected){
