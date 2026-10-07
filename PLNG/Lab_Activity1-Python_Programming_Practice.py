@@ -198,7 +198,7 @@ b = 6; print ("Area = ", areaRectangle(a, b))
 print("Perimeter = ", perimeterRectangle(a, b))
 
 #program 26
-import math
+import random
 # Taking Inputs
 lower = int(input("Enter Lower bound:- "))
 # Taking Inputs
@@ -215,7 +215,7 @@ count = 0
 # for calculation of minimum number of
 # guesses depends upon range
 while count < math.log(upper - lower + 1, 2):
-count += 1
+    count += 1
 # taking guessing number as input
 guess = int(input("Guess a number:- "))
 # Condition testing
