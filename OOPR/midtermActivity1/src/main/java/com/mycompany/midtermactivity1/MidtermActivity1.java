@@ -248,20 +248,17 @@ class Program6{
     }
 }
 
-class Program7{
-    public static void prog(){
+class Program7 {
+    public static void prog() {
         String filePath = "data.txt";
-
-        try(BufferedReader reader = new BufferedReader(new FileReader(filePath))){
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
-            while((line = reader.readLine()) != null){               
-                System.out.println(line);
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line.replace(",", "\t"));
             }
-        }
-        catch(FileNotFoundException e){
+        } catch (FileNotFoundException e) {
             System.out.println("Could not locate file");
-        }
-        catch(IOException e){
+        } catch (IOException e) {
             System.out.println("Error reading the file: " + e.getMessage());
         }
     }
@@ -302,34 +299,51 @@ public class MidtermActivity1 {
         switch(selected){
                 case 1:
                     Program_1.prog();
+                    selection = true;
+                    selectionMenu();
                     break;
                 case 2:
                     Program2.prog();
+                    selection = true;
+                    selectionMenu();
                     break;
                 case 3:
                     Program3.prog();
+                    selection = true;
+                    selectionMenu();
                     break;
                 case 4:
                     Program4.prog();
+                    selection = true;
+                    selectionMenu();
                     break;
                 case 5:
                     Program5.prog();
+                    selection = true;
+                    selectionMenu();
                     break;
                 case 6:
                     Program6.prog();
+                    selection = true;
+                    selectionMenu();
                     break;
                 case 7:
                     Program7.prog();
+                    selection = true;
+                    selectionMenu();
                     break;
                 case 8:
                     System.out.print("Exiting System...");
+                    selection = true;
+                    selectionMenu();
                     break;
                 default:
+                    System.out.println("Please input numbers between 1 and 8 only.");
+                    selection = true;
                     selectionMenu();
                     break;
         }
     }
-    
     public static void main(String args[]) {
         selectionMenu();
     }
