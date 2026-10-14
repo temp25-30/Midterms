@@ -41,6 +41,8 @@ public class OOP_MIDTERM_ClassAcitivy_2 {
                 
         String[] dateForm = {"Day", "Month", "Year"};
         int[] dateInt = {1,1,1999};
+        int[] months30 = {4,7,9,11}; //April, June, September, November
+        int[] months31 = {1,3,5,6,8,10,12}; //January, March, May, July, August, October, December
         
         System.out.println("\n>>Enter Issue Date<<");
         int inc = 0;
@@ -52,7 +54,16 @@ public class OOP_MIDTERM_ClassAcitivy_2 {
                 System.out.println("Number is too small! Try again!");
                 continue;
             }
-            
+            /*
+            for(int i = 0; i<4; i++){
+                if(dateInt[inc] == months30[i]){
+                    if(dateInt[0]>31){
+                    System.out.println("\nDay is greater than 31! Try again!");
+                    continue;
+                    }
+                }
+            }
+            */
             if(dateInt[0]>31){
                 System.out.println("\nDay is greater than 31! Try again!");
                 continue;
