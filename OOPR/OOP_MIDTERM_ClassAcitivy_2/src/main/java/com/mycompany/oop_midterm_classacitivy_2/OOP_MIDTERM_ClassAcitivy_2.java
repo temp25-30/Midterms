@@ -103,7 +103,7 @@ public class OOP_MIDTERM_ClassAcitivy_2 {
 
         System.out.println("You have read " + percRead + "% of the book so far.");
         System.out.println("You have " + daysRemaining + " days remaining");
-        System.out.println("You should read " +recommededRate+ " pages per day.");
+        System.out.println("You should read " +recommededRate+ " pages per day.");//round up
     }
     
     public static void main(String[] args) {
