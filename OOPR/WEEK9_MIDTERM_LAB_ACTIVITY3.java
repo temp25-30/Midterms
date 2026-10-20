@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class OOPR_MIDTERM_LAB_ACTIVITY3{
+public class WEEK9_MIDTERM_LAB_ACTIVITY3{
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
