@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class OOPR_MIDTERM_LAB_ACTIVITY6 {
+public class WEEK10_MIDTERM_LAB_ACTIVITY6 {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
