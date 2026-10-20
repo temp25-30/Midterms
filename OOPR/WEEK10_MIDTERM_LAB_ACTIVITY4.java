@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class OOPR_MIDTERM_LAB_ACTIVITY4 {
+public class WEEK10_MIDTERM_LAB_ACTIVITY4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
