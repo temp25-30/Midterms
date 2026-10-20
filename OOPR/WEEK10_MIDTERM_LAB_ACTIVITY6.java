@@ -203,21 +203,26 @@ public class WEEK10_MIDTERM_LAB_ACTIVITY6 {
         }
     }
 
-    static class Professor {
+static class Professor {
         String name;
         double salary;
+        String department;
 
-        public Professor(String name, double salary) {
+        public Professor(String name, double salary, String department) {
             this.name = name;
             this.salary = salary;
+            this.department = department;
+        }
+        
+        @Override
+        public String toString() {
+            return "Status\nRank: Professor\nName: " + name + "\nDepartment: " + department + "\nSalary: " + (int)salary;
         }
     }
 
     static class Deans extends Professor {
-        String department;
-
         public Deans(String name, double salary, String department) {
-            super(name, salary);
+            super(name, salary, department);
             this.department = department;
         }
 
@@ -243,10 +248,13 @@ public class WEEK10_MIDTERM_LAB_ACTIVITY6 {
         
         Deans dean = new Deans("John Cena", 32000, "English");
         Executive exec = new Executive("Ronald McDonald", 42000, "Computer Science");
+        Professor proff = new Professor("Dwayne Rock Johnson", 22000,"Information Technology");
 
         System.out.println(dean);
         System.out.println();
         System.out.println(exec);
+         System.out.println();
+        System.out.println(proff);
         
         System.out.print("\nPress Enter to return to main menu...");
         scanner.nextLine();
