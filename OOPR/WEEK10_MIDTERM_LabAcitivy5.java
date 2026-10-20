@@ -43,7 +43,7 @@ abstract class Account {
         System.out.printf("Withdrawal fee: ₱%.2f | New %s balance: ₱%.2f%n", fee, getAccountType(), this.balance);
     }
 
-    // Abstract methods ensuring polymorphism and abstraction
+    //to be overriden by subclasses
     public abstract double calculateWithdrawalFee();
     public abstract String getAccountType();
 }
